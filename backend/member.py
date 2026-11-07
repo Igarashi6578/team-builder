@@ -8,11 +8,11 @@ class Member:
     def can_facilitate(self,required_level):
         return self.facilitation>=required_level
 
-member1=Member("田中",2,5)
-member2=Member("佐藤",5,2)
-member3=Member("鈴木",3,4)
-
-member_list=[member1,member2,member3]
+member_list=[
+    Member("田中",2,5),
+    Member("佐藤",5,2),
+    Member("鈴木",3,4)
+]
 
 for member in member_list:
     print(member.introduce())

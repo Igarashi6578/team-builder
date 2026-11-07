@@ -3,8 +3,10 @@ class Member:
         self.name=name
         self.brightness=brightness
         self.facilitation=facilitation
+
     def introduce(self):
         return f"{self.name}:明るさ{self.brightness},進行能力{self.facilitation}"
+    
     def can_facilitate(self,required_level):
         return self.facilitation>=required_level
 
@@ -56,4 +58,4 @@ for light in lights:
 print()
 facilies=filter_facilitators(member_list,4)
 for facily in facilies:
-    print(facily.name,end="")
+    print(facily.name)

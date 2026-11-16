@@ -11,6 +11,12 @@ class Team:
     def get_member_count(self):
         return len(self.members)
 
+    def is_within_capacity(self,max_members):
+        return self.get_member_count()<=max_members
+
+    def has_facilitator(self,required_level):
+        return self.count_facilitators(required_level)>=1
+
     def count_facilitators(self,required_level):
         canfacilis=[]
         for member in self.members:
@@ -45,3 +51,7 @@ for team in teams:
     print()
     print(f"人数:{team.get_member_count()}人")
     print(f"進行役:{team.count_facilitators(4)}人")
+    print(f"人数{team.is_within_capacity(3)}")
+    print(f"人数が2人以下{team.is_within_capacity(2)}")
+    print(f"進行能力{team.has_facilitator(4)}")
+    print(f"進行能力6人以上{team.has_facilitator(6)}")

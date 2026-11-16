@@ -1,0 +1,2 @@
+Pythonのファイル操作を学習中
+今日はwriteとreadを学んだ
